@@ -11,7 +11,7 @@ spec:
       paths:
       - backend:
           serviceName: hello-python
-          servicePort: 5000
+          servicePort: 8080
         path: /
   tls:
   - hosts:

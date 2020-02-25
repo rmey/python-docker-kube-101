@@ -9,6 +9,6 @@ ADD requirements.txt /deploy/requirements.txt
 RUN pip install -r /deploy/requirements.txt
 ADD . /deploy/
 
-EXPOSE 5000
+EXPOSE 8080
 
 CMD ["gunicorn", "--config", "/deploy/gunicorn.cfg", "server:app"]
