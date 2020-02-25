@@ -1,0 +1,2 @@
+APP_FILE=server.py
+APP_CONFIG=gunicorn.cfg
