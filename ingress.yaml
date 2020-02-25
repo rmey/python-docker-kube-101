@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    ingress.bluemix.net/redirect-to-https: "True"
+  name: hello-python
+spec:
+  rules:
+  - host: hello-python.supercluster.eu-de.containers.appdomain.cloud
+    http:
+      paths:
+      - backend:
+          serviceName: hello-python
+          servicePort: 5000
+        path: /
+  tls:
+  - hosts:
+    - hello-python.supercluster.eu-de.containers.appdomain.cloud
+    secretName: supercluster
