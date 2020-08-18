@@ -1,6 +1,6 @@
-FROM python:3.7.4-alpine3.10
+FROM python:3.8-alpine
 
-RUN apk update && apk add gcc libc-dev
+RUN apk update && apk add gcc libc-dev libffi-dev file make
 
 RUN mkdir -p /deploy
 
